@@ -1,15 +1,4 @@
-// ==UserScript==
-// @name         FR Coliseum Item Index
-// @namespace    https://tampermonkey.net/
-// @version      1.0
-// @description  Item index for FR Coliseum Tracker
-// @grant        none
-// ==/UserScript==
-
-(function() {
-    'use strict';
-
-    window.itemIndex = {
+window.itemIndex = {
 // FOOD ITEMS
 
 6: {name: "Wasteland Pauper", category: "Food"},
@@ -3021,7 +3010,6 @@
 1276: {name: "Obsidian Hybrid Fragment", category: "Battle"},
 
     };
-})();
 
 
 
