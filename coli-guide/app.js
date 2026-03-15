@@ -136,7 +136,16 @@ function calculateStats(item, customBpm) {
             timePerDrop = 1 / (encPerMin * manualRate);
         }
 
-        results.push({ venueKey, display: venueInfo.display, encounterRate, encPerMin, timePerDrop });
+        results.push({
+            venueKey, display: venueInfo.display,
+            encounterRate, encPerMin, timePerDrop,
+            battlesToDrop: hasItemRates
+                ? (weightedDropRate > 0 ? 1 / weightedDropRate : null)
+                : (manualRate > 0 && encounterRate > 0 ? 1 / (encounterRate * manualRate) : null),
+            validEncToDrop: hasItemRates
+                ? (weightedDropRate > 0 ? encounterRate / weightedDropRate : null)
+                : (manualRate > 0 ? 1 / manualRate : null)
+        });
     }
 
     return results;
@@ -389,6 +398,8 @@ function renderResults(id) {
             <td class="td-num${hilEnc}">${fmt(row.encounterRate)}</td>
             <td class="td-num${hilEPM}">${fmt(row.encPerMin)}</td>
             <td class="td-num${hilTime}">${formatTime(row.timePerDrop)}</td>
+            <td class="td-num">${row.battlesToDrop ? Math.round(row.battlesToDrop).toLocaleString() : '—'}</td>
+            <td class="td-num">${row.validEncToDrop ? Math.round(row.validEncToDrop).toLocaleString() : '—'}</td>
         `;
         tbody.appendChild(tr);
     });
