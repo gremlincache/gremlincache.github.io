@@ -1,1 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>gremlincache — Flight Rising Tools</title>
+  <style>
+    :root {
+      --bg: #0b0d18;
+      --surface: #13162a;
+      --surface-2: #1b1f38;
+      --border: #252a45;
+      --border-bright: #3a4070;
+      --gold: #c9a227;
+      --gold-dim: #8a6e1a;
+      --gold-glow: rgba(201, 162, 39, 0.12);
+      --text: #e2ddd0;
+      --text-muted: #6e7499;
+      --text-dim: #9298bb;
+    }
 
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Georgia", serif;
+      font-size: 16px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2em 1.5em;
+    }
+
+    .container {
+      position: relative;
+      max-width: 640px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .site-name {
+      font-family: "Georgia", serif;
+      font-size: clamp(1.4em, 4vw, 2em);
+      font-weight: 400;
+      color: var(--text-muted);
+      margin-bottom: 0.4em;
+      opacity: 0;
+      animation: fadeUp 0.6s ease forwards;
+    }
+
+    .tagline {
+      color: var(--text-muted);
+      font-size: 1em;
+      margin-bottom: 3em;
+      font-family: "Calibri", sans-serif;
+      opacity: 0;
+      animation: fadeUp 0.6s ease 0.1s forwards;
+    }
+
+    .tools {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      margin-bottom: 3em;
+    }
+
+    .tool-card {
+      display: block;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25em 1.5em;
+      text-decoration: none;
+      text-align: left;
+      transition: border-color 0.2s, background-color 0.2s, transform 0.2s;
+      opacity: 0;
+      animation: fadeUp 0.6s ease forwards;
+    }
+    .tool-card:nth-child(1) { animation-delay: 0.25s; }
+    .tool-card:nth-child(2) { animation-delay: 0.35s; }
+
+    .tool-card:hover {
+      border-color: var(--gold-dim);
+      background: var(--surface-2);
+      transform: translateY(-2px);
+    }
+
+    .tool-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75em;
+      margin-bottom: 0.4em;
+    }
+
+      .tool-icon {
+      font-size: 1.2rem;
+      fill: var(--text-dim);
+      opacity: 0.7;
+      flex-shrink: 0;
+    }
+    
+    .tool-name {
+      font-family: 'Georgia', serif;
+      font-size: 1em;
+      font-weight: 600;
+      color: var(--gold);
+    }
+
+    .tool-desc {
+      color: var(--text-dim);
+      font-size: 0.95em;
+      line-height: 1.5;
+      padding-left: calc(1.2em + 0.75em);
+    }
+
+    .contact {
+      opacity: 0;
+      animation: fadeUp 0.6s ease 0.45s forwards;
+    }
+
+    .contact p {
+      color: var(--text-muted);
+      font-size: 0.9em;
+      font-style: italic;
+      margin-bottom: 0.75em;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5em;
+      flex-wrap: wrap;
+    }
+
+    .contact-link {
+      color: var(--text-dim);
+      text-decoration: none;
+      font-size: 0.85em;
+      font-family: "Arial", sans-serif;
+      letter-spacing: 0.08em;
+      font-size: 0.75em;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--border-bright);
+      padding-bottom: 1px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .contact-link:hover {
+      color: var(--gold);
+      border-color: var(--gold-dim);
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="site-name">tools by gremlincache</div>
+    <p class="tagline">(..)b</p>
+
+    <div class="tools">
+      <a class="tool-card" href="https://github.com/gremlincache/fr-coliseum-tracker" target="_blank">
+        <div class="tool-header">
+          <span class="tool-icon"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M320-160q-33 0-56.5-23.5T240-240v-80q0-17 11.5-28.5T280-360h80v-90q-30-2-59.5-12.5T249-494q-6-6-9.5-13.5T236-523v-27h-29q-8 0-15.5-3t-13.5-9l-90-90q-12-12-12-28t12-28q29-29 78-42.5t90-13.5q27 0 52.5 4t51.5 15q0-23 16-39t39-16h345q33 0 56.5 23.5T840-720v440q0 50-35 85t-85 35H320Zm120-200h200q17 0 28.5 11.5T680-320v40q0 17 11.5 28.5T720-240q17 0 28.5-11.5T760-280v-440H440v24l229 229q9 9 11 20.5t-3 22.5q-5 11-14 17.5t-23 6.5q-8 0-15.5-3.5T612-412L510-514l-8 8q-14 14-29.5 25T440-464v104ZM224-630h52q17 0 28.5 11.5T316-590v46q12 8 25 11t27 3q23 0 41.5-7t36.5-25l8-8-56-56q-29-29-65-43.5T256-684q-20 0-38 3t-36 9l42 42Zm376 350H320v40h286q-3-9-4.5-19t-1.5-21Zm-280 40v-40 40Z"/></svg></span>
+          <span class="tool-name">Coliseum Tracker</span>
+        </div>
+        <p class="tool-desc">A Tampermonkey userscript that tracks your coliseum loot, generates BBCode loot posts, and lets you set up drop goals as quests. <b>No automation of gameplay or scraping.</b> The tool only displays information the browser already sends.</p>
+      </a>
+      <a class="tool-card" href="https://gremlincache.github.io/coli-guide/" target="_blank">
+        <div class="tool-header">
+          <span class="tool-icon"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M640-560v-126 126ZM174-132q-20 8-37-4.5T120-170v-560q0-13 7.5-23t20.5-15l186-63q13-5 26-5t26 5l214 75 186-72q20-8 37 4.5t17 33.5v297q0 17-11.5 28.5T800-453q-17 0-28.5-11.5T760-493v-239l-120 46v100q0 17-11.5 28.5T600-546q-17 0-28.5-11.5T560-586v-100l-160-56v481q0 19-10.5 34T362-205l-188 73Zm26-96 120-46v-468l-120 40v474Zm496.5-32q22.5-20 23.5-60 1-34-22.5-57T640-400q-34 0-57 23t-23 57q0 34 23 57t57 23q34 0 56.5-20ZM640-160q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 23-5.5 43.5T778-238l74 74q11 11 11 28t-11 28q-11 11-28 11t-28-11l-74-74q-18 11-38.5 16.5T640-160ZM320-742v468-468Z"/></svg></span>
+          <span class="tool-name">Coliseum Drop Guide</span>
+        </div>
+        <p class="tool-desc">Find the best venues to grind for any coliseum item. Enemy data and pack data based on information by Maki, cataloguing of items, item drop sources and drop rates by me.</p>
+      </a>
+    </div>
+
+    <div class="contact">
+      <p>Got feedback or corrections? Please let me know if my code is bad, still learning ..b</p>
+      <div class="contact-links">
+        <a class="contact-link" href="https://gremlincache.tumblr.com" target="_blank">Tumblr</a>
+        <a class="contact-link" href="https://github.com/gremlincache" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
