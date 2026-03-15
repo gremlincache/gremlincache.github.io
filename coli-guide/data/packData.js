@@ -1015,32 +1015,84 @@ window.packData = {
   },
   "bamboo_waterfall": {
     "packs": [
-      ["Cloudrider"],
-      ["Thundercloud Herald"],
-      ["Baku","Dream Eater"],
-      ["Blacktalon Striker","Blacktalon Striker"],
-      ["Blazewing Croaker","Blazewing Croaker"],
-      ["Blazewing Croaker","Warbletongue Croaker"],
-      ["Calico Felislug","Calico Felislug"],
-      ["Dart-Tail Cockatrice","Dart-Tail Cockatrice"],
-      ["Dart-Tail Cockatrice","Golden Cockatrice"],
-      ["Dream Eater","Fungalhoof Cerdae"],
-      ["Ethereal Trickster","Trick-of-the-Light"],
-      ["Fungalhoof Cerdae","Baku"],
-      ["Gale Wolf","Mantled Foo"],
-      ["Golden Cockatrice","Golden Cockatrice"],
-      ["Raptorik Warrior","Raptorik Warrior"],
-      ["Red-Breasted Hainu","Hainu"],
-      ["Reedhollow Traveller","Reedhollow Traveller"],
-      ["Reedhollow Traveller","Talonok Mistwatcher"],
-      ["Talonok Mistwatcher","Talonok Mistwatcher"],
-      ["Tengu","Wandering Surge Priest"],
-      ["Tigerblood Foo","Mantled Foo"],
-      ["Tigerblood Foo","Red-Breasted Hainu"],
-      ["Tuxedo Felislug","Calico Felislug"],
-      ["Tuxedo Felislug","Tuxedo Felislug"],
-      ["Umbra Wolf","Gale Wolf"],
-      ["Wandering Surge Priest","Wandering Surge Priest"]
+    ["Cloudrider"]
+    ["Thundercloud Herald"]
+    ["Baku", "Dream Eater"]
+    ["Blacktalon Striker", "Blacktalon Striker"]
+    ["Blazewing Croaker", "Blazewing Croaker"]
+    ["Blazewing Croaker", "Warbletongue Croaker"]
+    ["Calico Felislug", "Calico Felislug"]
+    ["Dart-Tail Cockatrice", "Dart-Tail Cockatrice"]
+    ["Dart-Tail Cockatrice", "Golden Cockatrice"]
+    ["Dream Eater", "Fungalhoof Cerdae"]
+    ["Ethereal Trickster", "Trick-of-the-Light"]
+    ["Fungalhoof Cerdae", "Baku"]
+    ["Gale Wolf", "Mantled Foo"]
+    ["Golden Cockatrice", "Golden Cockatrice"]
+    ["Raptorik Warrior", "Raptorik Warrior"]
+    ["Red-Breasted Hainu", "Hainu"]
+    ["Reedhollow Traveller", "Reedhollow Traveller"]
+    ["Reedhollow Traveller", "Talonok Mistwatcher"]
+    ["Talonok Mistwatcher", "Talonok Mistwatcher"]
+    ["Tengu", "Wandering Surge Priest"]
+    ["Tigerblood Foo", "Mantled Foo"]
+    ["Tigerblood Foo", "Red-Breasted Hainu"]
+    ["Tuxedo Felislug", "Calico Felislug"]
+    ["Tuxedo Felislug", "Tuxedo Felislug"]
+    ["Umbra Wolf", "Gale Wolf"]
+    ["Wandering Surge Priest", "Wandering Surge Priest"]
+    ["Warbletongue Croaker", "Warbletongue Croaker"]
+    ["Baku", "Baku", "Baku"]
+    ["Baku", "Blacktalon Striker", "Dream Eater"]
+    ["Baku", "Dream Eater", "Baku"]
+    ["Baku", "Tengu", "Dream Eater"]
+    ["Baku", "Wandering Surge Priest", "Baku"]
+    ["Blacktalon Striker", "Tengu", "Raptorik Warrior"]
+    ["Blacktalon Striker", "Tigerblood Foo", "Raptorik Warrior"]
+    ["Blazewing Croaker", "Blazewing Croaker", "Blazewing Croaker"]
+    ["Blazewing Croaker", "Warbletongue Croaker", "Blazewing Croaker"]
+    ["Calico Felislug", "Calico Felislug", "Calico Felislug"]
+    ["Calico Felislug", "Tuxedo Felislug", "Calico Felislug"]
+    ["Dart-Tail Cockatrice", "Dart-Tail Cockatrice", "Dart-Tail Cockatrice"]
+    ["Dart-Tail Cockatrice", "Golden Cockatrice", "Dart-Tail Cockatrice"]
+    ["Dream Eater", "Baku", "Dream Eater"]
+    ["Dream Eater", "Dream Eater", "Dream Eater"]
+    ["Ethereal Trickster", "Trick-of-the-Light", "Ethereal Trickster"]
+    ["Fungalhoof Cerdae", "Fungalhoof Cerdae", "Fungalhoof Cerdae"]
+    ["Fungalhoof Cerdae", "Mantled Foo", "Fungalhoof Cerdae"]
+    ["Gale Wolf", "Umbra Wolf", "Gale Wolf"]
+    ["Golden Cockatrice", "Dart-Tail Cockatrice", "Golden Cockatrice"]
+    ["Golden Cockatrice", "Golden Cockatrice", "Golden Cockatrice"]
+    ["Hainu", "Dream Eater", "Red-Breasted Hainu"]
+    ["Hainu", "Hainu", "Hainu"]
+    ["Hainu", "Red-Breasted Hainu", "Hainu"]
+    ["Mantled Foo", "Mantled Foo", "Mantled Foo"]
+    ["Mantled Foo", "Tigerblood Foo", "Mantled Foo"]
+    ["Raptorik Warrior", "Blacktalon Striker", "Raptorik Warrior"]
+    ["Raptorik Warrior", "Raptorik Warrior", "Raptorik Warrior"]
+    ["Red-Breasted Hainu", "Fungalhoof Cerdae", "Hainu"]
+    ["Red-Breasted Hainu", "Hainu", "Red-Breasted Hainu"]
+    ["Red-Breasted Hainu", "Red-Breasted Hainu", "Red-Breasted Hainu"]
+    ["Reedhollow Traveller", "Reedhollow Traveller", "Reedhollow Traveller"]
+    ["Reedhollow Traveller", "Talonok Mistwatcher", "Reedhollow Traveller"]
+    ["Talonok Mistwatcher", "Reedhollow Traveller", "Talonok Mistwatcher"]
+    ["Talonok Mistwatcher", "Talonok Mistwatcher", "Talonok Mistwatcher"]
+    ["Tengu", "Wandering Surge Priest", "Tengu"]
+    ["Tigerblood Foo", "Gale Wolf", "Tigerblood Foo"]
+    ["Tigerblood Foo", "Mantled Foo", "Tigerblood Foo"]
+    ["Tigerblood Foo", "Tigerblood Foo", "Tigerblood Foo"]
+    ["Tigerblood Foo", "Trick-of-the-Light", "Mantled Foo"]
+    ["Trick-of-the-Light", "Ethereal Trickster", "Trick-of-the-Light"]
+    ["Trick-of-the-Light", "Wandering Surge Priest", "Red-Breasted Hainu"]
+    ["Tuxedo Felislug", "Calico Felislug", "Tuxedo Felislug"]
+    ["Tuxedo Felislug", "Tuxedo Felislug", "Tuxedo Felislug"]
+    ["Umbra Wolf", "Gale Wolf", "Umbra Wolf"]
+    ["Umbra Wolf", "Hainu", "Gale Wolf"]
+    ["Umbra Wolf", "Trick-of-the-Light", "Wandering Surge Priest"]
+    ["Umbra Wolf", "Umbra Wolf", "Umbra Wolf"]
+    ["Wandering Surge Priest", "Tengu", "Wandering Surge Priest"]
+    ["Warbletongue Croaker", "Blazewing Croaker", "Warbletongue Croaker"]
+    ["Warbletongue Croaker", "Warbletongue Croaker", "Warbletongue Croaker"]
     ]
   },
   "thunderhead_savanna": {
