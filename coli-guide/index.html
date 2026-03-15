@@ -1,1 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FR Coliseum Drop Guide</title>
+  <link rel="stylesheet" href="./styleSheet.css">
+  <script src="./data/itemIndex.js"></script>
+  <script src="./data/venueData.js"></script>
+  <script src="./data/packData.js"></script>
+  <script src="./data/enemyData.js"></script>
+</head>
+
+<body>
+  <div class="page">
+    <header>
+      <h1>Coliseum Drop Rate</h1>
+      <p class="subtitle">Find the best venues to grind for any coliseum item</p>
+    </header>
+
+    <main>
+      <section class="search-section">
+        <div class="search-wrapper">
+          <input type="text" id="itemSearch" placeholder="Search for an item by name or ID…" autocomplete="off">
+          <div id="autocomplete" class="autocomplete-list hidden"></div>
+        </div>
+
+        <div class="search-controls">
+          <div class="control-group">
+            <label for="sortSelect">Sort By</label>
+            <select id="sortSelect">
+              <option value="encPerMin">Encounters / Min</option>
+              <option value="encRate">Encounter Rate</option>
+              <option value="timePerDrop">Est. Time per Drop</option>
+            </select>
+          </div>
+          <div class="control-group" id="manualRarityGroup">
+            <label for="raritySelect">Drop Rarity</label>
+            <select id="raritySelect">
+              <option value="0.75">Common (~75%)</option>
+              <option value="0.30">Uncommon (~30%)</option>
+              <option value="0.03" selected>Scarce (~3%)</option>
+              <option value="0.01">Rare (~1%)</option>
+              <option value="0.0003">Very Rarely (~0.03%)</option>
+              <option value="custom">Custom…</option>
+            </select>
+          </div>
+          <div class="control-group hidden" id="customRarityGroup">
+            <label for="customRarity">Custom Rate (%)</label>
+            <input type="number" id="customRarity" min="0.001" max="100" value="5">
+          </div>
+          <div id="itemRatesGroup" class="hidden">
+            <div id="itemRates" class="item-rates control-group"></div>
+            <div id="itemRatesOverride" class="control-group item-rates"></div>
+          </div>
+          <div class="controls-buttons" style="flex-direction: row;">
+            <button id="rarityEditorToggle" class="btn-secondary">Edit Rarity Values</button>
+            <button id="bpmToggle" class="btn-secondary">Custom BPM</button>
+          </div>
+        </div>
+
+        <div id="bpmPanel" class="bpm-panel hidden">
+          <p class="bpm-note">Override battles per minute for specific venues. Leave blank to use defaults.</p>
+          <div id="bpmGrid" class="bpm-grid"></div>
+          <button id="resetBpm" class="btn-secondary btn-small">Reset All to Default</button>
+        </div>
+
+        <div id="rarityEditorPanel" class="bpm-panel hidden">
+          <p class="bpm-note">Adjust the assumed drop rate for each rarity tier. Values are percentages.</p>
+          <div id="rarityGrid" class="bpm-grid"></div>
+          <button id="resetRarity" class="btn-secondary btn-small">Reset to Defaults</button>
+        </div>
+      </section>
+
+      <section id="resultsSection" class="results-section hidden">
+        <div id="itemInfo" class="item-info"></div>
+        <div id="noResults" class="no-results hidden"></div>
+        <table id="resultsTable" class="results-table">
+          <thead>
+            <tr>
+              <th class="th-rank">#</th>
+              <th>Venue</th>
+              <th class="th-num sortable" data-sort="encRate">Enc. Rate</th>
+              <th class="th-num sortable active" data-sort="encPerMin">Enc. / Min</th>
+              <th class="th-num sortable" data-sort="timePerDrop">Est. Time</th>
+            </tr>
+          </thead>
+          <tbody id="resultsBody"></tbody>
+        </table>
+
+        <div class="results-legend">
+          <p><strong>Encounter Rate:</strong> Expected enemy encounters per battle that have a chance to drop the item.</p>
+          <p><strong>Enc. / Min:</strong> Encounter rate * battles per minute — the theoretical amount of drop opportunities per minute.</p>
+          <p><strong>Est. Time:</strong> Estimated minutes to get one drop, based on the selected rarity and your BPM.</p>
+        </div>
+      </section>
+
+      <div id="emptyState" class="empty-state">
+        <div class="empty-icon">⚔</div>
+        <p>Search for an item above to see venue recommendations. Drop rarity may be incorrect - double check the rarity listed in the Game Database.</p>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        <a href="https://docs.google.com/spreadsheets/d/12LQg6DvqkwP10NW7TZMp5bl6HIH3RBd1LmU4lw-5KLM/edit?gid=2046943558#gid=2046943558">Enemy pack, elemental rate and battles per minute</a>
+        compiled by <a href="https://www1.flightrising.com/clan-profile/19069">Maki</a>.
+        Drop rates based on <a href="https://www1.flightrising.com/forums/gde/3253580#post_3253580">zyviva's thread</a>.
+        Item drop sources and rates compiled by me (gremlincache) based on the Game Database ..b
+      </p>
+    </footer>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+
+</html>
