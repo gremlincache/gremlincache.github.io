@@ -14,6 +14,7 @@ function getRateValue(label) {
     return customRates[label] ?? RARITY_MAP[label] ?? 0;
 }
 
+
 // Precomputed enemy encounter rates
 // enemyRates[venueKey][enemyName] = appearances / totalPacks
 const enemyRates = {};
@@ -101,6 +102,16 @@ function getValidEnemiesForVenue(item, venueKey) {
     item.excludeEnemies?.forEach(name => valid.delete(name));
 
     return valid;
+}
+
+function getWeightedDropRateForVenue(item, venueKey) {
+    const valid = getValidEnemiesForVenue(item, venueKey);
+    const rates = enemyRates[venueKey] ?? {};
+    let w = 0;
+    valid.forEach(name => {
+        w += (rates[name] ?? 0) * (resolveDropRate(item, name) ?? 0);
+    });
+    return w;
 }
 
 // Stats calculation
@@ -361,11 +372,33 @@ function renderResults(id) {
     emptyState.style.display = 'none';
     section.classList.remove('hidden');
 
-    document.getElementById('itemInfo').innerHTML = `
-        <h2>${item.name}</h2>
-        <div class="item-meta">ID: ${id} · Category: ${item.category}</div>
-        <div class="item-source">${describeSource(item)}</div>
-    `;
+const topResult = results[0];
+const p = topResult
+    ? (item.dropRate
+        ? getWeightedDropRateForVenue(item, topResult.venueKey)
+        : topResult.encounterRate * getManualDropRate())
+    : null;
+
+function battlesForProb(prob) {
+    if (!p || p <= 0) return null;
+    return Math.ceil(Math.log(1 - prob) / Math.log(1 - p));
+}
+
+const probBlock = topResult ? `
+    <div class="item-probs">
+        <span class="prob-label">In ${topResult.display}:</span>
+        <span class="prob-item"><span class="prob-pct">50%</span> chance by <strong>${battlesForProb(0.5)?.toLocaleString() ?? '—'}</strong> battles</span>
+        <span class="prob-item"><span class="prob-pct">90%</span> chance by <strong>${battlesForProb(0.9)?.toLocaleString() ?? '—'}</strong> battles</span>
+        <span class="prob-item"><span class="prob-pct">99%</span> chance by <strong>${battlesForProb(0.99)?.toLocaleString() ?? '—'}</strong> battles</span>
+    </div>
+` : '';
+
+document.getElementById('itemInfo').innerHTML = `
+    <h2>${item.name}</h2>
+    <div class="item-meta">ID: ${id} · Category: ${item.category}</div>
+    <div class="item-source">${describeSource(item)}</div>
+    ${probBlock}
+`;
 
     renderItemRates(item);
 
