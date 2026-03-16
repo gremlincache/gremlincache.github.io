@@ -376,22 +376,39 @@ function renderResults(id) {
 
 const topResult = results[0];
 const p = topResult
-    ? (item.dropRate
-        ? getWeightedDropRateForVenue(item, topResult.venueKey)
-        : topResult.encounterRate * getManualDropRate())
-    : null;
+        ? (item.dropRate
+            ? getWeightedDropRateForVenue(item, topResult.venueKey)
+            : topResult.encounterRate * getManualDropRate())
+        : null;
 
-function battlesForProb(prob) {
-    if (!p || p <= 0) return null;
-    return Math.ceil(Math.log(1 - prob) / Math.log(1 - p));
-}
+    const p_enc = topResult
+        ? (item.dropRate
+            ? (() => {
+                const valid = getValidEnemiesForVenue(item, topResult.venueKey);
+                const rates = enemyRates[topResult.venueKey] ?? {};
+                let totalEncRate = 0;
+                valid.forEach(name => { totalEncRate += rates[name] ?? 0; });
+                return totalEncRate > 0 ? getWeightedDropRateForVenue(item, topResult.venueKey) / totalEncRate : null;
+            })()
+            : getManualDropRate())
+        : null;
+
+    function battlesForProb(prob) {
+        if (!p || p <= 0) return null;
+        return Math.ceil(Math.log(1 - prob) / Math.log(1 - p));
+    }
+
+    function encForProb(prob) {
+        if (!p_enc || p_enc <= 0) return null;
+        return Math.ceil(Math.log(1 - prob) / Math.log(1 - p_enc));
+    }
 
 const probBlock = topResult ? `
     <div class="item-probs">
         <span class="prob-label">In ${topResult.display}:</span>
-        <span class="prob-item"><span class="prob-pct">50%</span> chance by <strong>${battlesForProb(0.5)?.toLocaleString() ?? '—'}</strong> battles</span>
-        <span class="prob-item"><span class="prob-pct">90%</span> chance by <strong>${battlesForProb(0.9)?.toLocaleString() ?? '—'}</strong> battles</span>
-        <span class="prob-item"><span class="prob-pct">99%</span> chance by <strong>${battlesForProb(0.99)?.toLocaleString() ?? '—'}</strong> battles</span>
+        <span class="prob-item"><span class="prob-pct">50%</span> chance by <strong>${battlesForProb(0.5)?.toLocaleString() ?? '—'}</strong> battles / <strong>${encForProb(0.5)?.toLocaleString() ?? '—'}</strong> valid encounters</span>
+        <span class="prob-item"><span class="prob-pct">90%</span> chance by <strong>${battlesForProb(0.9)?.toLocaleString() ?? '—'}</strong> battles / <strong>${encForProb(0.9)?.toLocaleString() ?? '—'}</strong> valid encounters</span>
+        <span class="prob-item"><span class="prob-pct">99%</span> chance by <strong>${battlesForProb(0.99)?.toLocaleString() ?? '—'}</strong> battles / <strong>${encForProb(0.99)?.toLocaleString() ?? '—'}</strong> valid encounters</span>
     </div>
 ` : '';
 
