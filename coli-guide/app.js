@@ -362,6 +362,8 @@ function renderResults(id) {
     if (sortMode === 'encPerMin') results.sort((a, b) => b.encPerMin - a.encPerMin);
     else if (sortMode === 'encRate') results.sort((a, b) => b.encounterRate - a.encounterRate);
     else if (sortMode === 'timePerDrop') results.sort((a, b) => (a.timePerDrop ?? Infinity) - (b.timePerDrop ?? Infinity));
+    else if (sortMode === 'battlesToDrop') results.sort((a, b) => (a.battlesToDrop ?? Infinity) - (b.battlesToDrop ?? Infinity));
+    else if (sortMode === 'validEncToDrop') results.sort((a, b) => (a.validEncToDrop ?? Infinity) - (b.validEncToDrop ?? Infinity));
 
     const section = document.getElementById('resultsSection');
     const emptyState = document.getElementById('emptyState');
