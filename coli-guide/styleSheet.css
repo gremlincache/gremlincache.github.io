@@ -390,6 +390,36 @@ select option { background: var(--surface-2); }
   opacity: 0.2;
 }
 
+.item-probs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 1.5rem;
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.88rem;
+}
+
+.prob-label {
+    color: var(--text-muted);
+    font-style: italic;
+    width: 100%;
+    font-size: 0.82rem;
+}
+
+.prob-item {
+    color: var(--text-dim);
+}
+
+.prob-pct {
+    color: var(--gold);
+    font-family: "Arial", sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.05em;
+    margin-right: 0.2rem;
+}
+
 footer {
   margin-top: 4rem;
   padding-top: 1.5rem;
