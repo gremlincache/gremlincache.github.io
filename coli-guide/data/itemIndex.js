@@ -1,5 +1,15 @@
     window.itemIndex = {
 
+        // FEST CHESTS
+67966: { name: "Evergreen Expanse Chest", category: "Other", element: ["wind", "neutral"], allVenues: true, dropRate: "Very Rarely"},
+67967: { name: "Gale Winds Chest", category: "Other", element: ["wind", "neutral"], allVenues: true, dropRate: "Very Rarely"},
+67968: { name: "Lucky Feather Chest", category: "Other", element: ["wind", "neutral"], allVenues: true, dropRate: "Very Rarely"},
+67969: { name: "The Double of the Wind Chest", category: "Other", element: ["wind", "neutral"], allVenues: true, dropRate: "Very Rarely"},
+67970: { name: "Daffodil Dance Chest", category: "Other", element: ["wind", "neutral"], allVenues: true, dropRate: "Very Rarely"},
+67971: { name: "Really Winging It Chest", category: "Other", element: ["wind", "neutral"], allVenues: true, dropRate: "Very Rarely"},
+67972: { name: "Zephyrous Zenith Chest", category: "Other", element: ["wind", "neutral"], allVenues: true, dropRate: "Very Rarely"},
+67973: { name: "Windbound Spirit Chest", category: "Other", element: ["wind", "neutral"], allVenues: true, dropRate: "Very Rarely"},
+
 268: { name: "Grey Wizard Hat", category: "Apparel", enemies: ["Wandering Surge Priest"], dropRate: "Very Rarely"},
 269: { name: "Brown Wizard Hat", category: "Apparel", element: ["water"], allVenues: true, dropRate: "Very Rarely"},
 273: { name: "Red Fedora", category: "Apparel", enemies: ["Dodo"], dropRate: "Very Rarely"},
