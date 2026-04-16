@@ -2841,4 +2841,5 @@
 61507: { name: "Scene: Volcanic Vents", category: "Specialty", venues: ["volcanic_vents"], dropRate: "Very Rarely"},
 67031: { name: "Vista: Bamboo Falls II", category: "Specialty", venues: ["bamboo_waterfall"], dropRate: "Very Rarely"},
 67032: { name: "Scene: Bamboo Falls", category: "Specialty", venues: ["bamboo_waterfall"], dropRate: "Very Rarely"},
+68207: { name: "Ancient Gene Parchment: Porcelain", category: "Specialty", element: ["shadow", "ice"], allVenues: true, dropRate: "Very Rarely" },
     };
