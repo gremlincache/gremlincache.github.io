@@ -1,14 +1,13 @@
     window.itemIndex = {
 
-        // FEST CHESTS
-67966: { name: "Evergreen Expanse Chest", category: "Other", element: ["wind", "neutral"], allVenues: true, dropRate: "Very Rarely"},
-67967: { name: "Gale Winds Chest", category: "Other", element: ["wind", "neutral"], allVenues: true, dropRate: "Very Rarely"},
-67968: { name: "Lucky Feather Chest", category: "Other", element: ["wind", "neutral"], allVenues: true, dropRate: "Very Rarely"},
-67969: { name: "The Double of the Wind Chest", category: "Other", element: ["wind", "neutral"], allVenues: true, dropRate: "Very Rarely"},
-67970: { name: "Daffodil Dance Chest", category: "Other", element: ["wind", "neutral"], allVenues: true, dropRate: "Very Rarely"},
-67971: { name: "Really Winging It Chest", category: "Other", element: ["wind", "neutral"], allVenues: true, dropRate: "Very Rarely"},
-67972: { name: "Zephyrous Zenith Chest", category: "Other", element: ["wind", "neutral"], allVenues: true, dropRate: "Very Rarely"},
-67973: { name: "Windbound Spirit Chest", category: "Other", element: ["wind", "neutral"], allVenues: true, dropRate: "Very Rarely"},
+68304: { name: "Gone with the Flow Chest", category: "Other", element: ["water", "neutral"], allVenues: true, dropRate: "Very Rarely"},
+68305: { name: "Abandoned, Adrift Chest", category: "Other", element: ["water", "neutral"], allVenues: true, dropRate: "Very Rarely"},
+68306: { name: "Fishy Friends Chest", category: "Other", element: ["water", "neutral"], allVenues: true, dropRate: "Very Rarely"},
+68307: { name: "Esturary Nursery Chest", category: "Other", element: ["water", "neutral"], allVenues: true, dropRate: "Very Rarely"},
+68308: { name: "Thresher Hunt Chest", category: "Other", element: ["water", "neutral"], allVenues: true, dropRate: "Very Rarely"},
+68309: { name: "Jewel of the Deep Chest", category: "Other", element: ["water", "neutral"], allVenues: true, dropRate: "Very Rarely"},
+68310: { name: "School of Thought Chest", category: "Other", element: ["water", "neutral"], allVenues: true, dropRate: "Very Rarely"},
+68311: { name: "Cirrocampi Chest", category: "Other", element: ["water", "neutral"], allVenues: true, dropRate: "Very Rarely"},
 
 268: { name: "Grey Wizard Hat", category: "Apparel", enemies: ["Wandering Surge Priest"], dropRate: "Very Rarely"},
 269: { name: "Brown Wizard Hat", category: "Apparel", element: ["water"], allVenues: true, dropRate: "Very Rarely"},
