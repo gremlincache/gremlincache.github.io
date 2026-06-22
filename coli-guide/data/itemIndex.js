@@ -1,12 +1,12 @@
     window.itemIndex = {
-68625: { name: "Apple Sour Apple Chest", category: "Other", element: ["nature", "neutral"], allVenues: true, dropRate: "Very Rarely"},
-68626: { name: "The Woods are Watching Chest", category: "Other", element: ["nature", "neutral"], allVenues: true, dropRate: "Very Rarely"},
-68627: { name: "Living Bloom Chest", category: "Other", element: ["nature", "neutral"], allVenues: true, dropRate: "Very Rarely"},
-68628: { name: "Maw of Venus Chest", category: "Other", element: ["nature", "neutral"], allVenues: true, dropRate: "Very Rarely"},
-68629: { name: "Revived Blossom Chest", category: "Other", element: ["nature", "neutral"], allVenues: true, dropRate: "Very Rarely"},
-68630: { name: "Growth Cycle Chest", category: "Other", element: ["nature", "neutral"], allVenues: true, dropRate: "Very Rarely"},
-68631: { name: "Vivre Nouveau Chest", category: "Other", element: ["nature", "neutral"], allVenues: true, dropRate: "Very Rarely"},
-68632: { name: "Gladegift Boons Chest", category: "Other", element: ["nature", "neutral"], allVenues: true, dropRate: "Very Rarely"},
+68903: { name: "Scion of Helios Chest", category: "Other", element: ["light", "neutral"], allVenues: true, dropRate: "Very Rarely"},
+68904: { name: "Gleam of Grace Chest", category: "Other", element: ["light", "neutral"], allVenues: true, dropRate: "Very Rarely"},
+68905: { name: "Doctrine of the Unclouded Eye Chest", category: "Other", element: ["light", "neutral"], allVenues: true, dropRate: "Very Rarely"},
+68906: { name: "Sunburn Radiance Chest", category: "Other", element: ["light", "neutral"], allVenues: true, dropRate: "Very Rarely"},
+68907: { name: "Brilliant Artisan Chest", category: "Other", element: ["light", "neutral"], allVenues: true, dropRate: "Very Rarely"},
+68908: { name: "Brightshine Beast Chest", category: "Other", element: ["light", "neutral"], allVenues: true, dropRate: "Very Rarely"},
+68909: { name: "Hewn Rider Chest", category: "Other", element: ["light", "neutral"], allVenues: true, dropRate: "Very Rarely"},
+68910: { name: "Gilded Magnolia Chest", category: "Other", element: ["light", "neutral"], allVenues: true, dropRate: "Very Rarely"},
 
 
 268: { name: "Grey Wizard Hat", category: "Apparel", enemies: ["Wandering Surge Priest"], dropRate: "Very Rarely"},
