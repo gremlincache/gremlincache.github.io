@@ -1,14 +1,4 @@
     window.itemIndex = {
-68903: { name: "Scion of Helios Chest", category: "Other", element: ["light", "neutral"], allVenues: true, dropRate: "Very Rarely"},
-68904: { name: "Gleam of Grace Chest", category: "Other", element: ["light", "neutral"], allVenues: true, dropRate: "Very Rarely"},
-68905: { name: "Doctrine of the Unclouded Eye Chest", category: "Other", element: ["light", "neutral"], allVenues: true, dropRate: "Very Rarely"},
-68906: { name: "Sunburn Radiance Chest", category: "Other", element: ["light", "neutral"], allVenues: true, dropRate: "Very Rarely"},
-68907: { name: "Brilliant Artisan Chest", category: "Other", element: ["light", "neutral"], allVenues: true, dropRate: "Very Rarely"},
-68908: { name: "Brightshine Beast Chest", category: "Other", element: ["light", "neutral"], allVenues: true, dropRate: "Very Rarely"},
-68909: { name: "Hewn Rider Chest", category: "Other", element: ["light", "neutral"], allVenues: true, dropRate: "Very Rarely"},
-68910: { name: "Gilded Magnolia Chest", category: "Other", element: ["light", "neutral"], allVenues: true, dropRate: "Very Rarely"},
-
-
 268: { name: "Grey Wizard Hat", category: "Apparel", enemies: ["Wandering Surge Priest"], dropRate: "Very Rarely"},
 269: { name: "Brown Wizard Hat", category: "Apparel", element: ["water"], allVenues: true, dropRate: "Very Rarely"},
 273: { name: "Red Fedora", category: "Apparel", enemies: ["Dodo"], dropRate: "Very Rarely"},
