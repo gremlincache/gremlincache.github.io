@@ -2831,4 +2831,5 @@
 67031: { name: "Vista: Bamboo Falls II", category: "Specialty", venues: ["bamboo_waterfall"], dropRate: "Very Rarely"},
 67032: { name: "Scene: Bamboo Falls", category: "Specialty", venues: ["bamboo_waterfall"], dropRate: "Very Rarely"},
 68207: { name: "Ancient Gene Parchment: Porcelain", category: "Specialty", element: ["shadow", "ice"], allVenues: true, dropRate: "Very Rarely" },
+69661: { name: "Ancient Gene Parchment: Bark", category: "Specialty", element: ["earth", "nature", "water"], allVenues: true, dropRate: "Very Rarely" },
     };
